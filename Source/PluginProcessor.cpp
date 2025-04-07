@@ -226,11 +226,11 @@ juce::AudioProcessorValueTreeState::ParameterLayout SimpleReverbAudioProcessor::
 
     auto range = NormalisableRange<float>(0, 1, .01, 1);
 
-    layout.add(std::make_unique<AudioParameterFloat>("roomSize", "Room Size", range, .5));
-    layout.add(std::make_unique<AudioParameterFloat>("damping", "Damping", range, .5));
-    layout.add(std::make_unique<AudioParameterFloat>("dryWet", "Dry/Wet", range, .5));
-    layout.add(std::make_unique<AudioParameterFloat>("width", "Width", range, .5));
-    layout.add(std::make_unique<AudioParameterBool>("freeze", "Freeze", false));
+    layout.add(std::make_unique<AudioParameterFloat>(juce::ParameterID{"roomSize",1}, "Room Size", range, .5));
+    layout.add(std::make_unique<AudioParameterFloat>(juce::ParameterID{"damping",1}, "Damping", range, .5));
+    layout.add(std::make_unique<AudioParameterFloat>(juce::ParameterID{"dryWet",1}, "Dry/Wet", range, .5));
+    layout.add(std::make_unique<AudioParameterFloat>(juce::ParameterID{"width",1}, "Width", range, .5));
+    layout.add(std::make_unique<AudioParameterBool>(juce::ParameterID{"freeze",1}, "Freeze", false));
 
     return layout;
 }

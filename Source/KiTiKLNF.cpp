@@ -59,7 +59,7 @@ void Laf::drawRotarySlider(juce::Graphics& g, int x, int y, int width, int heigh
     //make circle with gradient
     float radialBlur = radius * 2.5;
 
-    auto grad = ColourGradient::ColourGradient(Colour(186u, 34u, 34u), bounds.getCentreX(), bounds.getCentreY(), Colours::black, radialBlur, radialBlur, true);
+    auto grad = ColourGradient(Colour(186u, 34u, 34u), bounds.getCentreX(), bounds.getCentreY(), Colours::black, radialBlur, radialBlur, true);
 
     g.setGradientFill(grad);
     g.fillRoundedRectangle(boundsFull.getCentreX() - (radius * rootTwo / 2), boundsFull.getCentreY() - (radius * rootTwo / 2), radius * rootTwo, radius * rootTwo, radius * .7);
@@ -166,7 +166,7 @@ void Laf::LevelMeter::paint(juce::Graphics& g)
         g.fillRoundedRectangle(bounds, 5.f);
 
         //get gradient
-        auto gradient = ColourGradient::ColourGradient(Colours::green, bounds.getBottomLeft(), Colours::red, bounds.getTopLeft(), false);
+        auto gradient = ColourGradient(Colours::green, bounds.getBottomLeft(), Colours::red, bounds.getTopLeft(), false);
         gradient.addColour(.5f, Colours::yellow);
         g.setGradientFill(gradient);
 

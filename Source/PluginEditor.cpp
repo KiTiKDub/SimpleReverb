@@ -63,7 +63,7 @@ SimpleReverbAudioProcessorEditor::~SimpleReverbAudioProcessorEditor()
 void SimpleReverbAudioProcessorEditor::paint (juce::Graphics& g)
 {
     auto bounds = getLocalBounds();
-    auto grad = juce::ColourGradient::ColourGradient(juce::Colour(186u, 34u, 34u), bounds.toFloat().getTopLeft(), juce::Colour(186u, 34u, 34u), bounds.toFloat().getBottomRight(), false);
+    auto grad = juce::ColourGradient(juce::Colour(186u, 34u, 34u), bounds.toFloat().getTopLeft(), juce::Colour(186u, 34u, 34u), bounds.toFloat().getBottomRight(), false);
     grad.addColour(.5f, juce::Colours::transparentBlack);
     grad.addColour(.7f, juce::Colour(186u, 34u, 34u));
 
@@ -102,7 +102,7 @@ void SimpleReverbAudioProcessorEditor::paint (juce::Graphics& g)
     freeze.setBounds(infoSpace);
 
     //Add Text
-    auto newFont = juce::Font(juce::Typeface::createSystemTypefaceFor(BinaryData::OFFSHORE_TTF, BinaryData::OFFSHORE_TTFSize));
+    auto newFont = juce::Font(juce::Typeface::createSystemTypefaceFor(BinaryData::offshore_ttf, BinaryData::offshore_ttfSize));
     g.setColour(juce::Colours::whitesmoke);
     g.setFont(newFont);
     g.setFont(30.f);
